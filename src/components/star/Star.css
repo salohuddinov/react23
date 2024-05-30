@@ -1,0 +1,12 @@
+.starrs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    color: #000;
+}
+
+.starr {
+    display: flex;
+    color: #000;
+}

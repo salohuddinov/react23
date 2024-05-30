@@ -1,0 +1,64 @@
+.swiper {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.carusel__img {
+    display: block;
+    width: 100%;
+    height: 344px;
+    object-fit: cover;
+}
+
+.autoplay-progress {
+    display: none;
+}
+
+.autoplay-progress svg {
+    display: none;
+}
+
+.header__bootm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+
+    .header__bootm__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .bootm__button1,
+        .bootm__button2 {
+            padding: 3px 10px;
+            border-radius: 10px;
+            background: #ecf00b;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 14px;
+        }
+
+        .bootm__button2 {
+            background: #dadada;
+        }
+
+        .bootm__select {
+            width: 150px;
+            border: 1px solid #ddd;
+            outline: none;
+            border-radius: 7px;
+            padding: 4px 15px;
+            cursor: pointer;
+        }
+
+        .language {
+            border-radius: 7px;
+            padding: 4px 15px;
+            border: 1px solid #ddd;
+            font-family: Poppins;
+        }
+    }
+}

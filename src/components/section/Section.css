@@ -1,0 +1,43 @@
+.main__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 55px auto;
+}
+
+.main__card {
+    display: flex;
+    width: 354px;
+    height: 239px;
+    border-radius: 22px;
+    background: rgb(246, 246, 246);
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.seshon {
+    width: 173px;
+}
+
+.seshon h2 {
+    color: rgb(30, 29, 29);
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.seshon p {
+    color: rgb(139, 142, 153);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 10px 0;
+}

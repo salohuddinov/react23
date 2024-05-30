@@ -1,0 +1,17 @@
+@import "variable";
+@import "fonts";
+@import "mixins";
+@import "reset";
+
+// layput
+@import "layout/header";
+@import "layout/footer";
+
+// components
+@import "components/hero.scss";
+@import "components/Carausel";
+@import "components/Product";
+
+
+// pages
+@import "pages/single";

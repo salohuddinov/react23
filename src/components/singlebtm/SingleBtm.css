@@ -1,0 +1,11 @@
+.customtabpanel__p {
+    width: 100%;
+    color: rgb(144, 152, 177);
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin: 15px 0;
+}

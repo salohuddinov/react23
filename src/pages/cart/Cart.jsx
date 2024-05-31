@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Cart.css';
+// import './Cart.css';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from "../../api";
 import Product from '../../components/product/Product';
@@ -17,8 +17,8 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import Slide from '@mui/material/Slide';
 
-const BOT_TOKEN = "7060301731:AAFUiEIF-Hs_s5zEwb_kulUMJGkpLLC2dxw";
-const CHAT_ID = "-1002035416931";
+// const BOT_TOKEN = "7060301731:AAFUiEIF-Hs_s5zEwb_kulUMJGkpLLC2dxw";
+// const CHAT_ID = "-1002035416931";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -83,32 +83,32 @@ const Cart = () => {
     if (!phone.trim() || !phone.trim()) {
       return toast.warn("Malumot to'liq emas")
     }
-    let text = "Buyurtma %0A%0A";
-    text += ` Ism: ${name} %0A`;
-    text += `Familiya: ${lastName} %0A`;
-    text += `Email: ${email} %0A`;
-    text += `Telefon raqami: ${phone} %0A`;
-    cart.forEach((product) => {
-      text += `${product.title} %0A`;
-      text += `Narxi: ${product.price} %0A`;
-      text += `Soni: ${product.quantity} %0A`;
-      text += `Jami: ${product.price * product.quantity} %0A`;
-      text += `%0A%0A`;
-    });
-    text += `Jami narxi: ${calculateTotalPrice()}`;
-    let url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`;
-    let api = new XMLHttpRequest();
-    api.open("GET", url, true);
-    api.send();
-    setName("");
-    setLastName("");
-    setEmail("");
-    setPhone("");
-    setShowOverlay(false);
-    cart.forEach((product) => {
-      dispatch(removeFromCart(product));
-    });
-    setOpen(false);
+    // let text = "Buyurtma %0A%0A";
+    // text += ` Ism: ${name} %0A`;
+    // text += `Familiya: ${lastName} %0A`;
+    // text += `Email: ${email} %0A`;
+    // text += `Telefon raqami: ${phone} %0A`;
+    // cart.forEach((product) => {
+    //   text += `${product.title} %0A`;
+    //   text += `Narxi: ${product.price} %0A`;
+    //   text += `Soni: ${product.quantity} %0A`;
+    //   text += `Jami: ${product.price * product.quantity} %0A`;
+    //   text += `%0A%0A`;
+    // });
+    // text += `Jami narxi: ${calculateTotalPrice()}`;
+    // let url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`;
+    // let api = new XMLHttpRequest();
+    // api.open("GET", url, true);
+    // api.send();
+    // setName("");
+    // setLastName("");
+    // setEmail("");
+    // setPhone("");
+    // setShowOverlay(false);
+    // cart.forEach((product) => {
+    //   dispatch(removeFromCart(product));
+    // });
+    // setOpen(false);
   };
 
 
@@ -163,7 +163,7 @@ const Cart = () => {
           <h2>TOTAL</h2>
           <h2>${total.toFixed(1)}</h2>
         </div>
-        <Button variant="outlined" onClick={handleClickOpen}>Check out</Button>
+        <Button className='ceskout' variant="outlined" onClick={handleClickOpen}>Check out</Button>
       </div>
       <Dialog className='checkout'
         open={open}
@@ -172,7 +172,7 @@ const Cart = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <h1>Make Payment</h1>
+        {/* <h1>Make Payment</h1>
         <form className='checkout__form' action="">
           <div className="fullname">
             <input required onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder='First Name' />
@@ -205,7 +205,7 @@ const Cart = () => {
             <input type="checkbox" />
           </div>
         </form>
-        <button onClick={handleOrder}>Go to Payment</button>
+        <button onClick={handleOrder}>Go to Payment</button> */}
       </Dialog>
     </div >);
 
@@ -222,7 +222,7 @@ const Cart = () => {
       <div className="cart">
         {cartContent}
       </div>
-      <Product data={data.slice(0, 4)} />
+      <Product data={data.slice(0, 10)} />
     </div>
   );
 }

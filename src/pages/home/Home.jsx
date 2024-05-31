@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Product from '../../components/product/Product'
 import axios from "../../api";
 import Corusel from "../../components/corusel/Corusel";
+import home from '../../images/home.png'
 
 const Home = () => {
     const [data, setData] = useState([]);
@@ -31,6 +32,11 @@ const Home = () => {
         <>
             <Corusel />
             <Product data={data} />
+            <div className="container">
+                <img className="homeimg" src={home} alt="" />
+            </div>
+            <Product data={data.slice(0, 10)} />
+            <Product data={data.slice(0, 30)} />
         </>
     )
 }
